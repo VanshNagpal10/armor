@@ -1,0 +1,11 @@
+{
+  "name": "armor",
+  "private": true,
+  "scripts": {
+    "railway:build": "npm ci --prefix mcp-server && npm run build --prefix mcp-server && npm ci --prefix backend && npm run build --prefix backend",
+    "railway:start": "npm start --prefix backend"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

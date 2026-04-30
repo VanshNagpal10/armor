@@ -23,7 +23,9 @@ import { fileURLToPath } from "url";
 // ---------------------------------------------------------------------------
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DB_PATH = path.resolve(__dirname, "..", "notes.db");
+const DB_PATH = process.env.NOTES_DB_PATH
+  ? path.resolve(process.env.NOTES_DB_PATH)
+  : path.resolve(__dirname, "..", "notes.db");
 
 const db = new Database(DB_PATH);
 
