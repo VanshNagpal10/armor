@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+const API = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000").replace(/\/$/, "");
+const WS_URL = API.replace(/^http/, "ws");
 
 interface PolicyRule {
   id: string;
@@ -58,7 +59,7 @@ export default function PoliciesPage() {
   useEffect(() => {
     let ws: WebSocket | null = null;
     try {
-      ws = new WebSocket(`ws://localhost:4000/ws`);
+      ws = new WebSocket(`${WS_URL}/ws`);
       ws.onmessage = (event) => {
         const data = JSON.parse(event.data);
         if (data.type === "policy_update") fetchRules();
