@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  /* ArmorIQ Brand Colors */
+  --primary: #E07B4C;
+  --primary-hover: #D06A3B;
+  --text-dark: #2D2D2D;
+  --text-medium: #4A4A4A;
+  --text-light: #6B6B6B;
+  --bg: #ffffff;
+  --bg-secondary: #f7f7f7;
+  --bg-card: #ffffff;
+  --bg-hover: #f0f0f0;
+  --border: #e2e2e2;
+  --border-light: #eeeeee;
+
+  /* Semantic */
+  --danger: #d94444;
+  --success: #3a9e5c;
+  --warning: #c88a2e;
+  --info: #4a7fc7;
+
+  /* Fonts */
+  --font-sunflower: "Sunflower", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-dark);
+  font-family: var(--font-sunflower);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-light);
+}
+
+/* Focus ring */
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 2px rgba(224, 123, 76, 0.15);
+}
+
+/* Button base */
+button {
+  cursor: pointer;
+  font-family: var(--font-sunflower);
+}
+
+/* Monospace elements */
+pre, code, .font-mono {
+  font-family: var(--font-geist-mono) !important;
+}
