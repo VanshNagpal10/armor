@@ -1,4 +1,4 @@
-# ArmorIQ — Guarded AI Agent with MCP Support
+# ArmorIQ - Guarded AI Agent with MCP Support
 
 A full-stack application featuring an AI agent with Model Context Protocol (MCP) support, a real-time policy engine for guardrails, and an admin dashboard.
 
